@@ -1,0 +1,11 @@
+# env
+.env.local
+
+# AI / tooling
+.agents
+.claude
+.AGENTS*
+.CLAUDE*
+
+# Convex generated files
+convex/_generated/

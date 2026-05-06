@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
 import { Providers } from "@/components/providers"
+import { ClerkProvider } from "@clerk/nextjs"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -28,7 +29,9 @@ export default function RootLayout({
       )}
     >
       <body>
-        <Providers>{children}</Providers>
+        <ClerkProvider>
+          <Providers>{children}</Providers>
+        </ClerkProvider>
       </body>
     </html>
   )
